@@ -1,0 +1,232 @@
+.author-articles {
+    background: linear-gradient(0deg, $basic-white 46%, $article-bg 100%);
+    padding: 65px 0;
+    
+    &-title {
+        @extend %basic-title;
+        font: 500 24px / 30px 'Ubuntu';
+        padding-bottom: 45px;
+    }
+    &-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    &-article {
+        display: flex;
+        box-sizing: border-box;
+        margin-bottom:  30px;
+        background-color: $article-bg;
+        // width: 18.40em !important;
+        // width: 60%;
+
+        @media screen and (max-width: 960px) {
+            // width: 23em !important;
+            // width: 75%;
+            margin: 20px 30px;
+            display: block;
+            
+        }
+        @media screen and (max-width: 640px){
+            // width: 30.67em !important;
+            // width: 100%;
+            margin: 20px 100px;
+            display: block;
+        }
+        
+        &.no-image {
+            .article-img {
+                background: $no-image-bg url(../img/fireball.png) center center no-repeat;
+            }
+        }
+        
+        &.hot-topic {
+            &::before {
+                content: 'hot topic';
+                background-color: $hot-topic-bg;
+                color: $darker-white;
+                font: 400 12px / 18px Ubuntu;
+                border-radius: 2px;
+                padding: 5px 10px;
+                position: absolute;
+                top: 7px;
+                right: 7px;
+                display: none;
+            }    
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        .article-img {
+            overflow: hidden;
+            position: relative;
+            width: 294px;
+            height: 164px;
+            img {
+                width: 100%;
+            }
+            &:hover {
+                opacity: .7;
+            }
+        }
+        .article-info {
+            padding: 0 20px;
+            
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+            }
+            &-general {
+                padding: 15px 0;
+                .date, .topic {
+                    color: $article-data-color;
+                    font: 400 13px / 19.5px 'Ubuntu';
+                }
+                .topic {
+                    float: right;
+                }
+            }
+            &-title {
+                @extend %basic-title;
+                font: 500 18px / 22.5px 'Ubuntu';
+                flex: 1 0 auto;
+                a {
+                    color: $dark-grey;
+                    &:hover {
+                        color: $basic-blue;
+                    }
+                }
+            }
+            &-stat {
+                padding: 15px 0;
+                color: $stats-data-color;
+                font: 400 11px / 16.5px 'Ubuntu';
+                position: relative;
+                span {
+                    padding-right: 25px;
+                    a {
+                        text-decoration: none;
+                        color:inherit;
+                    }
+                    a:hover {
+                        cursor: pointer;
+                        color: $basic-blue;
+                    }
+                }
+                i {
+                    display: inline-block;
+                    background: url(../img/informers-icons-s1d147429b5.png);
+                }
+                &>.views {
+                    &:hover .views {
+                        background: url('../img/icons/views-active.png') no-repeat;
+                    }
+                }
+                &>.rating {
+                    &:hover .rating {
+                        background: url('../img/icons/rating-active.png') no-repeat;
+                    }
+                }
+                &>.share {
+                    &:hover .share {
+                        background: url('../img/icons/share-active.png') no-repeat;
+                    }
+                }
+                .views {
+                    width: 12px;
+                    height: 8px;
+                    background-position: 0 8px;
+                }
+                .rating {
+                    width: 12px;
+                    height: 11px;
+                    background-position: 0 0;
+                }
+                .share {
+                    width: 12px;
+                    height: 10px;
+                    background-position: 0 18px;
+                }
+            }
+        }
+    }
+}
+
+.share-block {
+    display: none;
+    color: $stats-data-color;
+    font: 400 11px / 16.5px Ubuntu;
+    padding: 0 5px;
+    position: absolute;
+    z-index: 100;
+    
+    &::before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 7px solid transparent;
+        border-right: 8px solid white;
+        border-bottom: 7px solid transparent;
+        position: absolute;
+        top: 10px;
+        left: -3px;
+    }
+    li {
+        display: inline;
+        float: left;
+        padding: 8px 2.5px;
+        background-color: $basic-white;
+        &:first-child {
+            padding-left: 5px;
+        }
+        &:last-child {
+            padding-right: 5px;
+        }
+        
+        span {
+            display: inline-flex;
+        }
+        
+        i {
+            width: 10px;
+            height: 9px;
+            display: inline-block;
+            padding: 4px;
+            &:hover {
+                cursor: pointer;
+                opacity: .7;
+            }
+        }
+
+        .share-tw {
+            i {
+                background: #2bafeb url(../img/icons/share-twitter.png) center center no-repeat;
+            }
+            border: 1px solid #2bafeb;
+        }
+        .share-fb {
+            i {
+                background: #3b5998 url(../img/icons/share-fb.png) center center no-repeat;
+            }
+            border: 1px solid #3b5998;
+        }
+        .share-gplus {
+            i {
+                background: #e14b3f url(../img/icons/share-gplus.png) center center no-repeat;
+            }
+            border: 1px solid #e14b3f;
+        }
+        .share-linkedin {
+            i {
+                background: #1a7ab2 url(../img/icons/share-linkedin.png) center center no-repeat;
+            }
+            border: 1px solid #1a7ab2;
+        }
+        
+        .amount {
+            background: $basic-white;
+            padding: 0 5px;
+        }
+    }
+}

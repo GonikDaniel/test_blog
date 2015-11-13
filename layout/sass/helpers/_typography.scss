@@ -1,0 +1,41 @@
+//@import "compass/typography";
+//@import "compass/css3";
+//
+//$base-font-size: 16px !global;
+//$base-line-height: 24px !global;
+//$rhythm-unit: "rem" !global;
+//$rem-with-px-fallback: true !global;
+//
+//@media (min-width: 769px) {
+//	$base-font-size: 22px !global;
+//	$base-line-height: 33px !global;
+//	$rhythm-unit: "rem" !global;
+//	$rem-with-px-fallback: true !global;
+//}
+//
+////Establishes a font baseline for the given font-size.
+//@include establish-baseline;
+//
+////выравниваем все элементы по линеечке (относительно base-line-height) - добавляем отсупы после каждого селектора
+////собственно и задает этот самый вертикальный ритм
+//h1, h2, h3, h4, h5, h6, p, img, iframe {
+//	@include margin-trailer;
+//}
+//
+//h1, h2, h3, h4, h5, h6 {
+//	font-weight: 700;
+//	//background: rgba(orange, .5);
+//}
+//
+////регулируем высоту для заголовков с помощью миксина compass и сайта type-scale.com
+//h1 { @include adjust-font-size-to(3.157rem); }
+//h2 { @include adjust-font-size-to(2.369rem); }
+//h3 { @include adjust-font-size-to(1.777rem); }
+//h4 { @include adjust-font-size-to(1.333rem); }
+//h5 { @include adjust-font-size-to(1rem); }
+//h6 { @include adjust-font-size-to(0.75rem); }
+//
+//p {
+//	//background: rgba(green, .5);
+//	@include hyphenation; //выравниваем контент по ширине и добавляем переносы строк (не работает в хроме..)
+//}

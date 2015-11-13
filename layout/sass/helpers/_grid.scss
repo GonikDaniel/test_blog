@@ -1,0 +1,164 @@
+/* --------------------------------------------------
+Container
+-------------------------------------------------- */
+div#container, div.container { 
+/*    position: relative;*/
+    /*width: 942px;*/
+    width: 59em;
+    margin: 0 auto; 
+    padding: 0;
+    @media screen and (min-width: 480px) {
+        width: 44.25em;
+    }
+    @media screen and (min-width: 640px) {
+        width: 30em;
+    }
+}
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve {display: inline-block;}
+ 
+ 
+/* --------------------------------------------------
+Grid
+-------------------------------------------------- */
+.column-row, .row { margin: 0 0 18px -30px; }
+.column, .columns { float: left; display: inline; margin: 0 0 0 30px; }
+ 
+.one {
+    width: 3.1875em;
+    @media screen and (min-width: 480px) {
+        width: 2.390625em;
+    }
+    @media screen and (min-width: 640px){
+        width: 1.59375em;
+    }
+
+}
+.two {
+    width: 8.25em;
+    @media screen and (min-width: 480px) {
+        width: 6.1875em;
+    }
+    @media screen and (min-width: 640px){
+        width: 4.125em;
+    }
+
+}
+.three {
+    width: 13.3125em;
+    @media screen and (min-width: 480px) {
+        width: 9.984375em;
+    }
+    @media screen and (min-width: 640px){
+        width: 6.65625em;
+    }
+
+}
+.four {
+    width: 18.375em;
+    @media screen and (min-width: 480px) {
+        width: 13.78125em;
+    }
+    @media screen and (min-width: 640px){
+        width: 9.1875em;
+    }
+
+}
+.five {
+    width: 23.4375em;
+    @media screen and (min-width: 480px) {
+        width: 17.578125em;
+    }
+    @media screen and (min-width: 640px){
+        width: 11.71875em;
+    }
+
+}
+.six {
+    width: 28.5em;
+    @media screen and (min-width: 480px) {
+        width: 21.375em;
+    }
+    @media screen and (min-width: 640px){
+        width: 14.25em;
+    }
+
+}
+.seven {
+    width: 33.5625em;
+    @media screen and (min-width: 480px) {
+        width: 25.171875em;
+    }
+    @media screen and (min-width: 640px){
+        width: 16.78125em;
+    }
+
+}
+.eight {
+    width: 38.625em;
+    @media screen and (min-width: 480px) {
+        width: 28.96875em;
+    }
+    @media screen and (min-width: 640px){
+        width: 19.3125em;
+    }
+
+}
+.nine {
+    width: 43.6875em;
+    @media screen and (min-width: 480px) {
+        width: 32.765625em;
+    }
+    @media screen and (min-width: 640px){
+        width: 21.84375em;
+    }
+
+}
+.ten {
+    width: 48.75em;
+    @media screen and (min-width: 480px) {
+        width: 36.5625em;
+    }
+    @media screen and (min-width: 640px){
+        width: 24.375em;
+    }
+
+}
+.eleven {
+    width: 53.8125em;
+    @media screen and (min-width: 480px) {
+        width: 40.359375em;
+    }
+    @media screen and (min-width: 640px){
+        width: 26.90625em;
+    }
+
+}
+.twelve {
+    width: 58.875em;
+    @media screen and (min-width: 480px) {
+        width: 44.15625em;
+    }
+    @media screen and (min-width: 640px){
+        width: 29.4375em;
+    }
+
+}
+ 
+.offset-gap { margin-left: 1.875em; }
+.offset-by-one-half { margin-left: 40.5px; }
+.offset-by-one { margin-left: 81px; }
+.offset-by-two { margin-left: 162px; }
+.offset-by-three { margin-left: 243px; }
+.offset-by-four { margin-left: 324px; }
+.offset-by-five { margin-left: 405px; }
+.offset-by-six { margin-left: 486px; }
+.offset-by-seven { margin-left: 567px; }
+.offset-by-eight { margin-left: 648px; }
+.offset-by-nine { margin-left: 729px; }
+.offset-by-ten { margin-left: 810px; }
+ 
+/* Clear the columns automagically, thanks @kneath */
+.column-row:after, .row:after, .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+* html .column-row, * html .row, * html .clearfix { height: 1%; }
+.column-row, .row, .clearfix { display: inline-block; }
+.column-row, .row, .clearfix { display: block; }

@@ -1,0 +1,77 @@
+.subscription-wrapper {
+    text-align: center;
+    background-color: $light-blue;
+    position: relative;
+    
+    .subscription {
+        width: 50%;
+        margin: auto;
+        padding: 40px 0;
+        
+        p {
+            color: $darker-white;
+            font: 500 18px / 22.5px 'Ubuntu';
+            &.success {
+                font-weight: 400;
+                margin-top: 10px;
+            }
+        }
+        h2 {
+            color: $darker-white;
+            font: 500 18px / 22.5px 'Ubuntu';
+        }
+        input {
+            border-radius: 3px;
+            width: 246px;
+            border: 1px solid $light-grey;
+            padding: 9.5px 10px;
+            margin-top: 20px;
+        }
+        
+        input::-webkit-input-placeholder {
+            color: $light-grey;
+            font: 400 14px 'Ubuntu';
+        }
+        input::-moz-input-placeholder {
+            color: $light-grey;
+            font: 400 14px 'Ubuntu';
+        }
+        input::-ms-input-placeholder {
+            color: $light-grey;
+            font: 400 14px 'Ubuntu';
+        }
+        
+        &-error {
+            display: none;
+            border-radius: 6px;
+            background-color: $bad-email-red;
+            color: $basic-white;
+            font: 400 12px / 18px Ubuntu;
+            padding: 12px;
+            width: 220px;
+            position: absolute;
+            top: 90%;
+            left: 40%;
+            &::before {
+                content: '';
+                width: 0;
+                height: 0;
+                border-bottom: 7px solid #ed2d2d;
+                border-left: 8px solid transparent;
+                border-right: 7px solid transparent;
+                position: absolute;
+                top: -6px;
+                left: 100px;
+            }
+        }
+        
+        &-submit {
+            color: $basic-white;
+            font: 400 14px Ubuntu;
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 3px;
+            border: 1px solid #fff;
+            padding: 8px 12.5px;
+        }
+    }
+}

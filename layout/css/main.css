@@ -1,0 +1,748 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic&subset=latin,latin-ext);
+#tab-focus, .btn:focus, .btn.focus, .btn:active:focus, .btn.focus:active, .btn.active:focus, .btn.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.btn:hover, .btn:focus, .btn.focus {
+  opacity: .7;
+  text-decoration: none;
+}
+.btn:active, .btn.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+  cursor: disabled;
+  opacity: .65;
+  box-shadow: none;
+}
+
+.author-articles {
+  background: linear-gradient(0deg, #ffffff 46%, #e6eef1 100%);
+  padding: 65px 0;
+}
+.author-articles-title {
+  font: 500 24px / 30px 'Ubuntu';
+  padding-bottom: 45px;
+}
+.author-articles-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.author-articles-article {
+  display: flex;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  background-color: #e6eef1;
+}
+@media screen and (max-width: 960px) {
+  .author-articles-article {
+    margin: 20px 30px;
+    display: block;
+  }
+}
+@media screen and (max-width: 640px) {
+  .author-articles-article {
+    margin: 20px 100px;
+    display: block;
+  }
+}
+.author-articles-article.no-image .article-img {
+  background: #cedde1 url(../img/fireball.png) center center no-repeat;
+}
+.author-articles-article.hot-topic::before {
+  content: 'hot topic';
+  background-color: #ed2d2d;
+  color: #fefefe;
+  font: 400 12px / 18px Ubuntu;
+  border-radius: 2px;
+  padding: 5px 10px;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  display: none;
+}
+.author-articles-article a {
+  text-decoration: none;
+}
+.author-articles-article .article-img {
+  overflow: hidden;
+  position: relative;
+  width: 294px;
+  height: 164px;
+}
+.author-articles-article .article-img img {
+  width: 100%;
+}
+.author-articles-article .article-img:hover {
+  opacity: .7;
+}
+.author-articles-article .article-info {
+  padding: 0 20px;
+}
+.author-articles-article .article-info .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.author-articles-article .article-info-general {
+  padding: 15px 0;
+}
+.author-articles-article .article-info-general .date, .author-articles-article .article-info-general .topic {
+  color: #7598a2;
+  font: 400 13px / 19.5px 'Ubuntu';
+}
+.author-articles-article .article-info-general .topic {
+  float: right;
+}
+.author-articles-article .article-info-title {
+  font: 500 18px / 22.5px 'Ubuntu';
+  flex: 1 0 auto;
+}
+.author-articles-article .article-info-title a {
+  color: #333333;
+}
+.author-articles-article .article-info-title a:hover {
+  color: #2b94e1;
+}
+.author-articles-article .article-info-stat {
+  padding: 15px 0;
+  color: #64787e;
+  font: 400 11px / 16.5px 'Ubuntu';
+  position: relative;
+}
+.author-articles-article .article-info-stat span {
+  padding-right: 25px;
+}
+.author-articles-article .article-info-stat span a {
+  text-decoration: none;
+  color: inherit;
+}
+.author-articles-article .article-info-stat span a:hover {
+  cursor: pointer;
+  color: #2b94e1;
+}
+.author-articles-article .article-info-stat i {
+  display: inline-block;
+  background: url(../img/informers-icons-s1d147429b5.png);
+}
+.author-articles-article .article-info-stat > .views:hover .views {
+  background: url("../img/icons/views-active.png") no-repeat;
+}
+.author-articles-article .article-info-stat > .rating:hover .rating {
+  background: url("../img/icons/rating-active.png") no-repeat;
+}
+.author-articles-article .article-info-stat > .share:hover .share {
+  background: url("../img/icons/share-active.png") no-repeat;
+}
+.author-articles-article .article-info-stat .views {
+  width: 12px;
+  height: 8px;
+  background-position: 0 8px;
+}
+.author-articles-article .article-info-stat .rating {
+  width: 12px;
+  height: 11px;
+  background-position: 0 0;
+}
+.author-articles-article .article-info-stat .share {
+  width: 12px;
+  height: 10px;
+  background-position: 0 18px;
+}
+
+.share-block {
+  display: none;
+  color: #64787e;
+  font: 400 11px / 16.5px Ubuntu;
+  padding: 0 5px;
+  position: absolute;
+  z-index: 100;
+}
+.share-block::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-right: 8px solid white;
+  border-bottom: 7px solid transparent;
+  position: absolute;
+  top: 10px;
+  left: -3px;
+}
+.share-block li {
+  display: inline;
+  float: left;
+  padding: 8px 2.5px;
+  background-color: #ffffff;
+}
+.share-block li:first-child {
+  padding-left: 5px;
+}
+.share-block li:last-child {
+  padding-right: 5px;
+}
+.share-block li span {
+  display: inline-flex;
+}
+.share-block li i {
+  width: 10px;
+  height: 9px;
+  display: inline-block;
+  padding: 4px;
+}
+.share-block li i:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+.share-block li .share-tw {
+  border: 1px solid #2bafeb;
+}
+.share-block li .share-tw i {
+  background: #2bafeb url(../img/icons/share-twitter.png) center center no-repeat;
+}
+.share-block li .share-fb {
+  border: 1px solid #3b5998;
+}
+.share-block li .share-fb i {
+  background: #3b5998 url(../img/icons/share-fb.png) center center no-repeat;
+}
+.share-block li .share-gplus {
+  border: 1px solid #e14b3f;
+}
+.share-block li .share-gplus i {
+  background: #e14b3f url(../img/icons/share-gplus.png) center center no-repeat;
+}
+.share-block li .share-linkedin {
+  border: 1px solid #1a7ab2;
+}
+.share-block li .share-linkedin i {
+  background: #1a7ab2 url(../img/icons/share-linkedin.png) center center no-repeat;
+}
+.share-block li .amount {
+  background: #ffffff;
+  padding: 0 5px;
+}
+
+.author {
+  top: 123px;
+  margin-top: 75px;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 640px) {
+  .author {
+    text-align: center;
+    margin: 50px auto;
+  }
+}
+.author-avatar {
+  text-align: center;
+  vertical-align: top;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 640px) {
+  .author-avatar {
+    width: 100%;
+  }
+  .author-avatar button {
+    width: 500px;
+  }
+}
+.author-avatar .follow-menu {
+  display: none;
+  text-align: left;
+  margin-left: 57px;
+  background-color: #000000;
+}
+@media screen and (max-width: 640px) {
+  .author-avatar .follow-menu {
+    width: 500px;
+    margin-left: 103px;
+  }
+}
+.author-avatar .follow-menu:hover .author-btn-social {
+  background-color: #333333;
+}
+.author-avatar .follow-menu:hover {
+  display: block;
+}
+.author-avatar .follow-menu li:hover {
+  background-color: #333333;
+}
+.author-avatar .follow-menu a {
+  color: #ffffff;
+  font: 400 12px Ubuntu;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+.author-avatar .follow-menu i {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  padding-right: 10px;
+}
+.author-avatar .follow-menu .follow-icon-site {
+  background: url(../img/icons/follow-site.png) no-repeat;
+}
+.author-avatar .follow-menu .follow-icon-twitter {
+  background: url(../img/icons/follow-twitter.png) no-repeat;
+}
+.author-avatar .follow-menu .follow-icon-linkedin {
+  background: url(../img/icons/follow-linkedin.png) no-repeat;
+}
+.author-avatar .follow-menu .follow-icon-google {
+  background: url(../img/icons/follow-gplus.png) no-repeat;
+}
+.author-btn-social {
+  width: 99px;
+  height: 26px;
+  margin-top: 10px;
+  border-radius: 2px;
+  background: #2b94e1;
+  color: #ffffff;
+  font: 400 12px 'Ubuntu';
+}
+.author-btn-social:hover + .follow-menu {
+  display: block;
+}
+.author-btn-social:hover {
+  background-color: #000000;
+}
+.author-info-name {
+  font: 500 32px / 40px 'Ubuntu';
+  display: block;
+}
+.author-info-job {
+  color: rgba(100, 120, 126, 0.7);
+  font: 400 13px / 19.5px 'Ubuntu';
+  padding: 10px 0;
+}
+.author-info-job-company {
+  color: #2b94e1;
+  font: 400 13px / 18px 'Ubuntu';
+  text-decoration: none;
+}
+.author-info-job-company:hover {
+  color: rgba(100, 120, 126, 0.7);
+}
+.author-info-statistics {
+  margin: 20px 0 30px 0;
+  color: #98aaaf;
+  font: 400 13px / 19.5px 'Ubuntu';
+  text-transform: uppercase;
+}
+.author-info-statistics div {
+  display: inline-block;
+}
+.author-info-statistics .amount {
+  display: block;
+  color: #333333;
+  font: 500 24px / 30px 'Ubuntu';
+}
+.author-info-about {
+  margin-bottom: 20px;
+}
+.author-info-about .text {
+  font: 400 13px / 19.5px 'Ubuntu';
+}
+.author-info-expertise-tag {
+  display: inline-block;
+  border: 1px solid #98aaaf;
+  padding: 5px;
+  border-radius: 2px;
+  color: #64787e;
+  font: 400 13px / 19.5px 'Ubuntu';
+  margin-right: 5px;
+}
+.author-info-expertise-tag:hover {
+  background-color: #64787e;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.comments {
+  margin-top: 55px;
+}
+.comments h2 {
+  font: 500 15px / 22.5px Ubuntu;
+  display: inline-block;
+}
+.comments-amount {
+  padding-left: 10px;
+}
+.comments-login {
+  display: inline-block;
+  margin-bottom: 15px;
+  float: right;
+}
+.comments-login-success {
+  color: #2b94e1;
+  font: 400 12px / 18px Ubuntu;
+  border-bottom: 1px dotted #2b94e1;
+  text-decoration: none;
+}
+.comments-login-success:hover {
+  border-bottom: none;
+  color: #186ba8;
+}
+.comments-login input {
+  border-radius: 2px;
+  border: 1px solid #91ACB1;
+  padding: 6.5px 85px 6.5px 10px;
+}
+.comments-login input::-webkit-input-placeholder {
+  color: #cccccc;
+  font-size: 12px;
+}
+.comments-login input::-moz-input-placeholder {
+  color: #cccccc;
+  font-size: 12px;
+}
+.comments-login input::-ms-input-placeholder {
+  color: #cccccc;
+  font-size: 12px;
+}
+.comments-login button {
+  background-color: #2b94e1;
+  border-radius: 2px;
+  border: 1px solid #2b94e1;
+  padding: 7.5px 12px;
+  color: #ffffff;
+  font: 400 12px Ubuntu;
+}
+.comments-new-comment {
+  margin-bottom: 25px;
+}
+.comments-new-comment textarea {
+  width: 99%;
+  border-radius: 3px;
+  border: 1px solid #91ACB1;
+  height: 60px;
+}
+.comments-new-comment button {
+  width: 54px;
+  height: 32px;
+  margin-top: 10px;
+  background-color: #2b94e1;
+  border: 1px solid #2b94e1;
+  border-radius: 3px;
+  color: #ffffff;
+  font: 400 14px Ubuntu;
+  opacity: .5;
+  cursor: not-allowed;
+}
+.comments-comment.reply {
+  margin-left: 60px;
+}
+.comments-comment.reply img {
+  width: 33px;
+}
+.comments-comment img {
+  vertical-align: top;
+}
+.comments-comment .comment-content {
+  padding-left: 10px;
+}
+.comments-comment .comment-content-title .name {
+  color: #333333;
+  font: 700 14px / 19.5px Ubuntu;
+}
+.comments-comment .comment-content-title .replied {
+  padding-left: 5px;
+  color: #999999;
+  font: 400 13px / 16.5px Ubuntu;
+}
+.comments-comment .comment-content-title .replied i {
+  width: 16px;
+  height: 13px;
+  display: inline-block;
+  background: url("../img/icons/reply.png");
+}
+.comments-comment .comment-content-title .time {
+  color: #999999;
+  font: 400 13px / 16.5px Ubuntu;
+  padding-left: 5px;
+}
+.comments-comment .comment-content-text {
+  color: #333333;
+  font: 400 14px / 21px Ubuntu;
+}
+.comments-comment .comment-content-text .show-less {
+  display: block;
+}
+.comments-comment .comment-content-text .show-less > a {
+  display: inline-block;
+  color: #2b94e1;
+  font: 400 13px / 19.5px Ubuntu;
+  border-bottom: 1px dotted #2b94e1;
+  margin: 15px 0;
+  text-decoration: none;
+}
+.comments-comment .comment-content-text .show-less > a:hover {
+  border-bottom-color: transparent;
+}
+.comments-comment .comment-content-like-reply {
+  padding: 10px 0;
+  color: #999999;
+  font: 400 13px / 19.5px Ubuntu;
+}
+.comments-comment .comment-content-like-reply .amount {
+  font-weight: 500;
+  margin-right: 5px;
+}
+.comments-comment .comment-content-like-reply .amount.positive {
+  color: #4fae33;
+}
+.comments-comment .comment-content-like-reply .amount.negative {
+  color: #d00000;
+}
+.comments-comment .comment-content-like-reply .reply {
+  text-decoration: none;
+  color: #999999;
+}
+.comments-comment .comment-content-like-reply .reply:hover {
+  color: #2b94e1;
+}
+.comments-comment .comment-content-like-reply .like, .comments-comment .comment-content-like-reply .dislike {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-top: -3px;
+}
+.comments-comment .comment-content-like-reply .like {
+  background: url(../img/icons/like.png) no-repeat;
+}
+.comments-comment .comment-content-like-reply .like:hover {
+  cursor: pointer;
+  background: url(../img/icons/like-active.png) no-repeat;
+}
+.comments-comment .comment-content-like-reply .dislike {
+  background: url(../img/icons/dislike.png) no-repeat;
+  margin-right: 5px;
+}
+.comments-comment .comment-content-like-reply .dislike:hover {
+  cursor: pointer;
+  background: url(../img/icons/dislike-active.png) no-repeat;
+}
+
+.subscription-wrapper {
+  text-align: center;
+  background-color: #74b1c6;
+  position: relative;
+}
+.subscription-wrapper .subscription {
+  width: 50%;
+  margin: auto;
+  padding: 40px 0;
+}
+.subscription-wrapper .subscription p {
+  color: #fefefe;
+  font: 500 18px / 22.5px 'Ubuntu';
+}
+.subscription-wrapper .subscription p.success {
+  font-weight: 400;
+  margin-top: 10px;
+}
+.subscription-wrapper .subscription h2 {
+  color: #fefefe;
+  font: 500 18px / 22.5px 'Ubuntu';
+}
+.subscription-wrapper .subscription input {
+  border-radius: 3px;
+  width: 246px;
+  border: 1px solid #cccccc;
+  padding: 9.5px 10px;
+  margin-top: 20px;
+}
+.subscription-wrapper .subscription input::-webkit-input-placeholder {
+  color: #cccccc;
+  font: 400 14px 'Ubuntu';
+}
+.subscription-wrapper .subscription input::-moz-input-placeholder {
+  color: #cccccc;
+  font: 400 14px 'Ubuntu';
+}
+.subscription-wrapper .subscription input::-ms-input-placeholder {
+  color: #cccccc;
+  font: 400 14px 'Ubuntu';
+}
+.subscription-wrapper .subscription-error {
+  display: none;
+  border-radius: 6px;
+  background-color: #ed2d2d;
+  color: #ffffff;
+  font: 400 12px / 18px Ubuntu;
+  padding: 12px;
+  width: 220px;
+  position: absolute;
+  top: 90%;
+  left: 40%;
+}
+.subscription-wrapper .subscription-error::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-bottom: 7px solid #ed2d2d;
+  border-left: 8px solid transparent;
+  border-right: 7px solid transparent;
+  position: absolute;
+  top: -6px;
+  left: 100px;
+}
+.subscription-wrapper .subscription-submit {
+  color: #ffffff;
+  font: 400 14px Ubuntu;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 3px;
+  border: 1px solid #fff;
+  padding: 8px 12.5px;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+.icons-sprite {
+  background-image: url('/img/icons-s273b578121.png');
+  background-repeat: no-repeat;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: #333333;
+  font-size: 0.6em;
+  line-height: 1.618;
+}
+@media screen and (min-width: 480px) {
+  body {
+    font-size: 0.75em;
+  }
+}
+@media screen and (min-width: 640px) {
+  body {
+    font-size: 1em;
+  }
+}
+
+header {
+  width: 100%;
+  background: #ffffff;
+  background: #333539 url(../img/SEMrush-Logo-small.png) center center no-repeat;
+  padding: 25px 0;
+}
+header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: .2;
+}
+header:hover {
+  opacity: 1;
+  z-index: 100;
+}
+header.comment-added {
+  background: #4fae33;
+  opacity: 1;
+  z-index: 100;
+  font-size: 15px;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+}
+header.comment-added .close-notification {
+  float: right;
+  padding-right: 80px;
+  cursor: pointer;
+}
+
+.author-articles-title, .author-articles-article .article-info-title, .author-info-about .title, .author-info-expertise-title {
+  color: #333333;
+  font: 500 18px / 22.5px 'Ubuntu';
+  margin-bottom: 10px;
+}
+
+footer {
+  width: 100%;
+  margin-top: 45px;
+  background: #fff;
+  padding: 32px 0;
+  background: #222222;
+}
+footer p {
+  vertical-align: middle;
+  background: url(../img/SEMrush-Logo-small2.png) left center no-repeat;
+  padding-left: 220px;
+  color: #999999;
+  font: 400 12px / 30px Ubuntu;
+}

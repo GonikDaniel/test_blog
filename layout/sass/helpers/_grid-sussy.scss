@@ -1,0 +1,114 @@
+@import "susy";
+$column: 3.1875em;
+
+// Susy Grid Config
+// For more information: http://susydocs.oddbird.net/en/latest/settings/
+
+$susy: (
+  columns: 12,
+  gutters: 3/5,
+    container: 60em,
+    math: fluid,
+    output: float,
+    gutter-position: inside,
+    
+    debug: (
+        image: hide,
+        color: rgba(#66f, .5),
+        output: background,
+        toggle: top right,
+    )
+    
+);
+
+/* Susy Grid Rules */
+
+
+.container {
+    @include container();
+    @media screen and (max-width: 768px) {
+        margin: 0;
+    }
+}
+
+.offset-gap {
+    margin-left: 2em
+}
+
+.one { width: ($column * 1); }
+.two { width: ($column * 2); }
+.three { width: ($column * 3); }
+.four { width: ($column * 4); }
+.five { width: ($column * 5); }
+.six { width: ($column * 6); }
+.seven { width: ($column * 7); }
+.eight { width: ($column * 8); }
+.nine { width: ($column * 9); }
+.ten { width: ($column * 10); }
+.eleven { width: ($column * 11); }
+.twelve { width: ($column * 12); }
+
+// #main {
+//     @include container();
+//     // Using Compass Vertical Rhythm
+//     // @include margin-trailer(2);
+//     // @include margin-leader(2);
+//     @media screen and (max-width: 768px) {
+//         margin: 0;
+//     }
+// }
+
+// #masthead {
+//     @include span(12);
+//     background: rgba(green, .7);
+// }
+
+// #content {
+//     @include span(8);
+//     background: rgba(darkorange, .7);
+//     @media screen and (max-width: 768px) {
+//         @include span(12);
+//     }
+// }
+
+// #sidebar {
+//     @include span(4 last);
+//     background: rgba(hotpink, .7);
+//     @media screen and (max-width: 768px) {
+//         @include span(12);
+//     }
+// }
+
+// #ad {
+//     @include span(8);
+//     @include push(2);
+//     background: rgba(red, .7);
+//     @media screen and (max-width: 768px) {
+//         @include span(12);
+//     }
+// }
+
+// #pre-footer {
+//     @include span(12);
+//     background: rgba(brown, .7);
+// }
+// .pre-footer-column {
+//     @include span(4);
+//     &:last-child {
+//         @include span(4 last);
+//         @media screen and (max-width: 768px) {
+//             @include span(12);
+//         }
+//     }
+//     @media screen and (max-width: 768px) {
+//         @include span(12);
+//     }
+// }
+
+// #colophon {
+//     @include span(12);
+//     // Using Compass Vertical Rhythm
+//     @include padding-trailer(1);
+//     @include padding-leader(1);
+//     background: rgba(black, .7);
+// }

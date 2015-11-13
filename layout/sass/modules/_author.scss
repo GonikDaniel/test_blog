@@ -1,0 +1,145 @@
+.author {
+    top: 123px;
+    margin-top: 75px;
+    margin-bottom: 60px;
+
+    @media screen and (max-width: 640px){
+        text-align: center;
+        margin: 50px auto;
+    }
+    
+    &-avatar {
+        text-align: center;
+        vertical-align: top;
+        margin-bottom: 20px;
+        @media screen and (max-width: 640px){
+            width: 100%;
+            button {
+                width: 500px;
+            }
+        }
+        
+        .follow-menu {
+            display: none;
+            text-align: left;
+            margin-left: 57px;
+            background-color: #000000;
+
+            @media screen and (max-width: 640px){
+                width: 500px;
+                margin-left: 103px;
+            }
+            &:hover .author-btn-social {
+                background-color: #333333;
+            }
+            &:hover {
+                display: block;
+            }
+            li:hover {
+                background-color: #333333;
+            }
+            a {
+                color: #ffffff;
+                font: 400 12px Ubuntu;
+                text-decoration: none;
+                padding: 5px 10px;
+            }
+            i {
+                display: inline-block;
+                width: 11px;
+                height: 11px;
+                padding-right: 10px;
+            }
+            .follow-icon-site {
+                background: url(../img/icons/follow-site.png) no-repeat;
+            }
+            .follow-icon-twitter {
+                background: url(../img/icons/follow-twitter.png) no-repeat;
+            }
+            .follow-icon-linkedin {
+                background: url(../img/icons/follow-linkedin.png) no-repeat;
+            }
+            .follow-icon-google {
+                background: url(../img/icons/follow-gplus.png) no-repeat;
+            }
+        }
+    }
+    
+    &-btn-social {
+        width: 99px;
+        height: 26px;
+        margin-top: 10px;
+        border-radius: 2px;
+        background: #2b94e1;
+        color: #ffffff;
+        font: 400 12px 'Ubuntu';
+        &:hover + .follow-menu {
+            display: block;
+        }
+        &:hover {
+            background-color: #000000;
+        }
+    }
+    
+    &-info {
+        &-name {
+            font: 500 32px / 40px 'Ubuntu';
+            display: block;
+        }
+        &-job {
+            color: rgba(100, 120, 126, 0.7);
+            font: 400 13px / 19.5px 'Ubuntu';
+            padding: 10px 0;
+            &-company {
+                color: #2b94e1;
+                font: 400 13px / 18px 'Ubuntu';
+                text-decoration: none;
+                &:hover {
+                    color: rgba(100, 120, 126, 0.7);
+                }
+            }
+        }
+        &-statistics {
+            margin: 20px 0 30px 0;
+            color: #98aaaf;
+            font: 400 13px / 19.5px 'Ubuntu';
+            text-transform: uppercase;
+            div {
+                display: inline-block;
+            }
+            .amount {
+                display: block;
+                color: #333333;
+                font: 500 24px / 30px 'Ubuntu';
+            }
+        }
+        &-about {
+            margin-bottom: 20px;
+            .title {
+                @extend %basic-title;
+            }
+            .text {
+                font: 400 13px / 19.5px 'Ubuntu';
+            }
+        }
+        &-expertise {
+            &-title {
+                @extend %basic-title;
+            }
+            &-tag {
+                display: inline-block;
+                border: 1px solid #98aaaf;
+                padding: 5px;
+                border-radius: 2px;
+                color: #64787e;
+                font: 400 13px / 19.5px 'Ubuntu';
+                margin-right: 5px;
+                &:hover {
+                    background-color: #64787e;
+                    color: #ffffff;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

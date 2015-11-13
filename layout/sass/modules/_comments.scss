@@ -1,0 +1,173 @@
+.comments {
+    margin-top: 55px;
+    h2 {
+        font: 500 15px / 22.5px Ubuntu;
+        display: inline-block;
+    }
+    &-amount {
+        padding-left: 10px;
+    }
+    &-login {
+        display: inline-block;
+        margin-bottom: 15px;
+        float: right;
+        &-success {
+            color: $basic-blue;
+            font: 400 12px / 18px Ubuntu;
+            border-bottom: 1px dotted $basic-blue;
+            text-decoration: none;
+            &:hover {
+                border-bottom: none;
+                color: darken($basic-blue, 15%);
+            }
+        }
+        input {
+            border-radius: 2px;
+            border: 1px solid #91ACB1;
+            padding: 6.5px 85px 6.5px 10px;
+        }
+        input::-webkit-input-placeholder {
+            color: $light-grey;
+            font-size: 12px;
+        }
+        input::-moz-input-placeholder {
+            color: $light-grey;
+            font-size: 12px;
+        }
+        input::-ms-input-placeholder {
+            color: $light-grey;
+            font-size: 12px;
+        }
+        button {
+            background-color: $basic-blue;
+            border-radius: 2px;
+            border: 1px solid $basic-blue;
+            padding: 7.5px 12px;
+            color: $basic-white;
+            font: 400 12px Ubuntu;
+        }
+    }
+    &-new-comment {
+        margin-bottom: 25px;
+        textarea {
+            width: 99%;
+            border-radius: 3px;
+            border: 1px solid #91ACB1;
+            height: 60px;
+        }
+        button {
+            width: 54px;
+            height: 32px;
+            margin-top: 10px;
+            background-color: $basic-blue;
+            border: 1px solid $basic-blue;
+            border-radius: 3px;
+            color: $basic-white;
+            font: 400 14px Ubuntu;
+            opacity: .5;
+            cursor: not-allowed;
+        }
+    }
+    &-comment {
+        &.reply {
+            margin-left: 60px;
+            img {
+                width: 33px;
+            }
+        }
+        img {
+            vertical-align: top;
+        }
+        .comment-content {
+            padding-left: 10px;
+            &-title {
+                .name {
+                    color: $dark-grey;
+                    font: 700 14px / 19.5px Ubuntu;
+                }
+                .replied {
+                    padding-left: 5px;
+                    color: $grey;
+                    font: 400 13px / 16.5px Ubuntu;
+                    i {
+                        width: 16px;
+                        height: 13px;
+                        display: inline-block;
+                        background: url('../img/icons/reply.png');
+                    }
+                }
+                .time {
+                    color: $grey;
+                    font: 400 13px / 16.5px Ubuntu;
+                    padding-left: 5px;
+                }
+            }
+            &-text {
+                color: $dark-grey;
+                font: 400 14px / 21px Ubuntu;
+
+                .show-less {
+                    display: block;
+                    & > a {
+                        display: inline-block;
+                        color: $basic-blue;
+                        font: 400 13px / 19.5px Ubuntu;
+                        border-bottom: 1px dotted $basic-blue;
+                        // -webkit-text-decoration: underline dotted $basic-blue;
+                        // text-decoration-style: dotted;
+                        // text-decoration-color: $basic-blue;
+                        margin: 15px 0;
+                        text-decoration: none;
+                        &:hover {
+                            border-bottom-color: transparent;
+                        }
+                    }
+                }
+            }
+            &-like-reply {
+                padding: 10px 0;
+                color: $grey;
+                font: 400 13px / 19.5px Ubuntu;
+                .amount {
+                    font-weight: 500;
+                    margin-right: 5px;
+                    &.positive {
+                        color: $good-raiting-green;
+                    }
+                    &.negative {
+                        color: $bad-raiting-red;
+                    }
+                }
+                .reply {
+                    text-decoration: none;
+                    color: $grey;
+                    &:hover {
+                        color: $basic-blue;
+                    }
+                }
+                .like, .dislike {
+                    display: inline-block;
+                    width: 13px;
+                    height: 13px;
+                    margin-top: -3px;
+                }
+                .like {
+                    background: url(../img/icons/like.png) no-repeat;
+                    &:hover {
+                        cursor: pointer;
+                        background: url(../img/icons/like-active.png) no-repeat;
+                    }
+                }
+                .dislike {
+                    background: url(../img/icons/dislike.png) no-repeat;  
+                    margin-right: 5px;
+                    &:hover {
+                        cursor: pointer;
+                        background: url(../img/icons/dislike-active.png) no-repeat;
+                    }
+                }
+                
+            }
+        }
+    }
+}

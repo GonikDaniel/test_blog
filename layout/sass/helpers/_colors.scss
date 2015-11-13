@@ -1,0 +1,22 @@
+$dark-grey: #333333;
+$grey: lighten($dark-grey, 40%); // #999999
+$light-grey: lighten($dark-grey, 60%); // #cccccc
+$header-bg: #333539;
+$article-bg: #e6eef1;
+$no-image-bg: #cedde1;
+$hot-topic-bg: #ed2d2d;
+$article-data-color: #7598a2;
+$stats-data-color: #64787e;
+
+$basic-white: #ffffff;
+$darker-white: darken($basic-white, 0.5%);
+
+$comment-added-color: #4fae33;
+
+$basic-blue: #2b94e1;
+$light-blue: #74b1c6;
+$good-raiting-green: $comment-added-color;
+$bad-raiting-red: #d00000;
+$bad-email-red: $hot-topic-bg;
+
+$btn-default-color: $basic-white;

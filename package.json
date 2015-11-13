@@ -1,0 +1,26 @@
+{
+  "name": "Blog",
+  "version": "0.0.1",
+  "description": "Test blog for SEMrush",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GonikDaniel/"
+  },
+  "author": "Gonik Daniel",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": ""
+  },
+  "devDependencies": {
+    "gulp": "~3.8.10",
+    "gulp-csso": "~0.2.9",
+    "gulp-autoprefixer": "~2.0.0",
+    "gulp-rename": "~1.2.0",
+    "gulp-livereload": "~2.1.1",
+    "gulp-connect": "~2.2.0"
+  }
+}
