@@ -11,11 +11,11 @@ What have been done?
 - basic comments features (you, at least, now can add you comments... but actually only on client side, so - it's mostly for testing cases)
 
 
-You can see it working [here]() as well.
+You can see it working [here](http://igonik.ru/blog/) as well.
 
 ## Requirements ##
 
-- 
+- It'll useful to have sass compiler, gulp and bower if would like to make some changes on it, but no obligatory requirements are not expected to
 - Passion about programming and clear mind;)
 
 ## Quick Start ##

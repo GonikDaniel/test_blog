@@ -58,7 +58,7 @@
       if (validateEmail(email)) {
         loginSuccess();
         localStorage.setItem('login_email', email);
-
+        user_email = localStorage.getItem('login_email');
       }
     });
 
