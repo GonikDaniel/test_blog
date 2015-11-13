@@ -9,7 +9,7 @@ What have been done?
 
 - some things about adaptivity (not perfect, actually, but I'll still work on it)
 - basic comments features (you, at least, now can add you comments... but actually only on client side, so - it's mostly for testing cases)
- 
+
 
 You can see it working [here]() as well.
 
@@ -21,8 +21,8 @@ You can see it working [here]() as well.
 ## Quick Start ##
 
 1. First clone the repository
-2. 
-3. 
+2. If you need to make some changes on styles - it's better to use SASS compiler - so, cd in layout folder and launch "sass --watch"
+3. Enjoy!
 
 ## Details ##
 
@@ -36,7 +36,7 @@ Please submit issues through the [issue tracker](https://github.com/GonikDaniel/
 
 ## History ##
 
-**blog 0.0.1 - 02/10/2015**
+**blog 0.0.1 - 13/11/2015**
 
 - just add all file from a scratch
 
